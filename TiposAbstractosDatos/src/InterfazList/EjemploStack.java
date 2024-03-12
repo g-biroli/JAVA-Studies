@@ -9,7 +9,7 @@ import java.util.Stack;
  * Su uso es ineficiente, es mejor usar interfaz Deque o Likedist, sólo para accesos 
  * sincronizados con hilos.
  * */
-public class EjemploStack {
+public class EjemploStack {		//mostrando a posicao na fila.
 
 	public static void main(String[] args) {
 		Stack st = new Stack();

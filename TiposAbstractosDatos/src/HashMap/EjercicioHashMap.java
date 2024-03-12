@@ -12,7 +12,7 @@ import java.util.HashMap;
  * orden a la hora de realizar las iteraciones. 
  * */
 
-public class EjercicioHashMap {
+public class EjercicioHashMap {		//pode adicionar null nesse, mas nao tem ordem.
 
 	public static void main(String[] args) {
 		HashMap<Integer,String> hashMap = new HashMap<>();
