@@ -18,5 +18,5 @@ public class Aula02 {
 		c2.status();
 		c2.rabiscar();
 	}
-
+//tst
 }
