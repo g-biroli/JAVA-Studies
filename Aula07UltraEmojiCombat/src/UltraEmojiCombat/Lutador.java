@@ -11,8 +11,8 @@ public class Lutador {
 	private int vitorias, derrotas, empates;
 	
 	
-	//Métodos Publicos
-	public void apresentar () {
+	//Métodos Publicos				//AQUI SE USA getPeso, getNacionalidade, get..., porque o metodo get de cada coisa é simplesmente o resultado 
+	public void apresentar () {		// do atributo, entao é a mesma coisa de colocar this.peso, porem com a seguranca que ninguem vai mudar :) !
 		System.out.println("CHEGOU A HORA! Apresentamos o Lutador " + getNome());
 		System.out.println("Diretamente de " + getNacionalidade());
 		System.out.println(getIdade() + " anos");
@@ -23,7 +23,10 @@ public class Lutador {
 		System.out.println("Empatou " + getEmpates());
 	}
 	public void status() {
-		
+		System.out.println(this.getNome() + " é um peso " + this.getCategoria());
+		System.out.println("Ganhou " + this.getVitorias() + " vezes");
+		System.out.println("Perdeu " + this.getDerrotas() + " vezes");
+		System.out.println("Empatou " + this.getEmpates() + " vezes");
 	}
 	public void ganharLuta() {
 		this.setVitorias(getVitorias() + 1);
@@ -40,7 +43,7 @@ public class Lutador {
 		this.nacionalidade = na;
 		this.idade = id;
 		this.altura = al;
-		this.peso = pe;
+		this.setPeso(pe);	//Unica linha diferente, devido a condicao dentro de setPeso, a qual vinculamos com a variavel Categoria!
 		this.vitorias = vi;
 		this.derrotas = de;
 		this.empates = em;
@@ -74,7 +77,7 @@ public class Lutador {
 	}
 	public void setPeso(float peso) {
 		this.peso = peso;
-		
+		this.setCategoria();  		//Chamando o setCategoria para usarmos as condicoes e classificar os lutadores
 	}
 	public String getCategoria() {
 		return categoria;
